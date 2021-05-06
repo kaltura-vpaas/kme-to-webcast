@@ -8,8 +8,8 @@ $config->setServiceUrl('https://www.kaltura.com');
 $client = new KalturaClient($config);
 
 // Use an Admin KS to create the live stream (webcast) entry (needed for operations like listing of conversion profiles)
-$ks = $client->generateSession(API_ADMIN_SECRET, ADMIN_USER_ID, KalturaSessionType::ADMIN, PARTNER_ID, KS_EXPIRY);
-$client->setKS($ks);
+$adminKalturaSession = $client->generateSession(API_ADMIN_SECRET, ADMIN_USER_ID, KalturaSessionType::ADMIN, PARTNER_ID, KS_EXPIRY);
+$client->setKS($adminKalturaSession);
 $livestreamID = LIVESTREAM_ENTRY_ID;
 if (LIVESTREAM_ENTRY_ID == '') {
   // Get the necessary conversion profiles
@@ -59,10 +59,10 @@ $logoUrl = $absoluteUrl."kaltura-logo.png";
 
 
 $expiresAt = time() + KS_EXPIRY;
-$ks1 = $client->generateSession(API_ADMIN_SECRET, PRESENTER_USER_ID, KalturaSessionType::USER, PARTNER_ID, KS_EXPIRY, 'resourceId:'.RESOURCE_ID.',role:adminRole,userContextualRole:0,email:manager@pat.com');
+$roomUserKS = $client->generateSession(API_ADMIN_SECRET, PRESENTER_USER_ID, KalturaSessionType::USER, PARTNER_ID, KS_EXPIRY, 'resourceId:'.RESOURCE_ID.',role:adminRole,userContextualRole:0,email:manager@pat.com');
 
 // This is the page to join the newrow room
-$joinRoomPageUrl = "https://".PARTNER_ID.".kaf.kaltura.com/virtualEvent/launch?ks=".$ks1;
+$joinRoomPageUrl = "https://".PARTNER_ID.".kaf.kaltura.com/virtualEvent/launch?ks=".$roomUserKS;
 
 // This is the page where the webcast can be viewed.
 //$playbackPageUrl = "http://localhost/kaltura-newrow2webcast/webcast-viewer/?entryId=".$liveStreamEntry->id;
