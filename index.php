@@ -75,31 +75,8 @@ $playerEmbedURL = "https://cdnapisec.kaltura.com/p/".PARTNER_ID."/embedPlaykitJs
   <head>
     <title>Kaltura Newrow2Webcast</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-      body {
-	      font-family: 'robotolight', 'Open Sans', 'Helvetica', 'Arial', sans-serif;
-	      text-align:   center;
-	      font-weight:  300;
-      }
-      .launch {
-	      font-size:       14px;
-	      text-align:      center;
-	      text-decoration: none;
-	      display:         inline-block;
-	      padding:         14px 0px 14px 0px;
-	      margin-bottom:   10px;
-	      width:           200px;
-	      border-radius:   5px;
-        background-color: #fc9003;
-      	color:            white;
-        -webkit-appearance: none;
-      }
-      .divider { color: #83C36D }
-      h1 { font-weight: 300; }
-      h2 { font-weight: 300; }
-      h3 { font-weight: 300; }
-      h4 { font-weight: 300; }
-    </style>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+    <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <img src="<?php echo $logoUrl; ?>" height="60"/>
