@@ -74,7 +74,7 @@ $playerEmbedURL = "https://cdnapisec.kaltura.com/p/".PARTNER_ID."/embedPlaykitJs
 <html>
   <head>
     <title>Kaltura Newrow2Webcast</title>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
       body {
 	      font-family: 'robotolight', 'Open Sans', 'Helvetica', 'Arial', sans-serif;
