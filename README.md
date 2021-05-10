@@ -6,7 +6,7 @@ This app highlights how one broadcast the contents of a Kaltura Meetings Experie
 
 - PHP and Apache installed on development machine
 - Download and unzip the [PHP Kaltura Client Library](https://github.com/kaltura/KalturaGeneratedAPIClientsPHP/archive/v16.14.0.tar.gz). Rename the folder to KalturaClient and move it into the repository root folder.
-- in AppSettings.php, replace the occurences of "INSERT_PROPER_VALUE" with the proper values.
+- Copy AppSettings.php.template to AppSettings.php and replace the occurences of "INSERT_PROPER_VALUE" with the proper values.
 
 ## Key Features
 
